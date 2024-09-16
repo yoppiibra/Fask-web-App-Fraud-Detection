@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+  />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <title>App Fraud Detector</title>
+  </head>
+  <body>
+    <div class="container contact-form">
+      <form action="{{url_for('predict')}}" method="post">
+        <h3>Online Fraud Detector</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="number"
+                name="step"
+                class="form-control"
+                placeholder="step"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="type"
+                class="form-control"
+                placeholder="type"
+                value=""
+                required
+                min="1"
+                max="4"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="amount"
+                class="form-control"
+                placeholder="amount"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="oldbalanceOrg"
+                class="form-control"
+                placeholder="oldbalanceOrg"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="newbalanceOrig"
+                class="form-control"
+                placeholder="newbalanceOrig"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="oldbalanceDest"
+                class="form-control"
+                placeholder="oldbalanceDest"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="newbalanceDest"
+                class="form-control"
+                placeholder="newbalanceDest"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btnContact">Prediction</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Prediction Result</h3>
+            <div class="card">
+              <div class="card-body">
+                <h4>{{ prediction_text }}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
