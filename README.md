@@ -1,4 +1,4 @@
-# Fask-web-App-Fraud-Detection
+# Flask-web-App-Fraud-Detection
 
 Ini adalah sebuah Project Data Scienties Online Fraud Payments untuk menganalisa dan mengklasifikasikan sebuah transaksi apakah terdapat kecenderungan untuk melakukan kegiatan fraud atau penipuan, untuk itu saya menggunakan model machine learning seperti LogisticRegressionCV, K-Nearest Neighbors (KNN), Support Vector Classifier (SVC), DecisionTree, RandomForesh, AdaBoost, GradientBoosting dan XGBoost serta menggunakan HyperparameterTuning yaitu GridSearchCV
 
